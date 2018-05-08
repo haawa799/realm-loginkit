@@ -1,0 +1,6 @@
+framework module Pods_RealmLoginKit {
+  umbrella header "Pods-RealmLoginKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
