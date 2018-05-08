@@ -51,6 +51,8 @@ playground.xcworkspace
 # Carthage/Checkouts
 
 Carthage/Build
+Carthage/Checkouts/*
+!Carthage/Checkouts/xcconfigs
 
 # fastlane
 #
