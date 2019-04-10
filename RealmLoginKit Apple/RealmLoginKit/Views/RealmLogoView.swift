@@ -28,7 +28,7 @@ public enum RealmLogoStyle {
 public class RealmLogoView: UIView
 {
     /** Set the visual style of the Realm logo */
-    @IBInspectable public var style: RealmLogoStyle = .colored {
+    public var style: RealmLogoStyle = .colored {
         didSet {
             setNeedsDisplay()
         }

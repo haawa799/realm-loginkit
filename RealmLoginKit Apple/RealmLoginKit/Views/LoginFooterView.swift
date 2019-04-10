@@ -65,7 +65,7 @@ class LoginFooterView: UIView {
     // Views
     private let loginButton = UIButton(type: .system)
     private let registerButton = UIButton(type: .system)
-    private let loadingIndicator = UIActivityIndicatorView(activityIndicatorStyle: .white)
+    private let loadingIndicator = UIActivityIndicatorView(style: .white)
     
     
     var loginButtonTappedHandler: (() -> Void)?
@@ -173,7 +173,7 @@ class LoginFooterView: UIView {
         updateSubmitButton()
     }
     
-    func buttonTapped(sender: AnyObject?) {
+    @objc func buttonTapped(sender: AnyObject?) {
         guard let sender = sender else {
             return
         }

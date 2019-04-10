@@ -88,7 +88,7 @@ public class LoginViewController: UIViewController {
         get {
             if _isSecureConnection { return true }
             if let scheme = serverURL?.URLScheme {
-                return scheme.characters.last! == "s"
+                return scheme.last! == "s"
             }
 
             return false

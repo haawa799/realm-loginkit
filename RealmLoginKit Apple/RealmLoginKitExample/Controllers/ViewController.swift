@@ -44,7 +44,7 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
     }
     
-    func segmentedControlChanged() {
+    @objc func segmentedControlChanged() {
         view.backgroundColor = UIColor(white: isDarkMode ? 0.1 : 0.92, alpha: 1.0)
         navigationController?.navigationBar.barStyle = isDarkMode ? .blackTranslucent : .default
         view.window?.tintColor = isDarkMode ? UIColor(red:90.0/255.0, green:120.0/255.0, blue:218.0/255.0, alpha:1.0) : nil;
@@ -52,8 +52,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showLoginButtonTapped(_ sender: AnyObject?) {
-        let style: LoginViewControllerStyle = isDarkMode ? .darkTranslucent : .lightTranslucent
-        let loginViewController = LoginViewController(style: style)
+//        let style: LoginViewControllerStyle = isDarkMode ? .darkTranslucent : .lightTranslucent
+//        let loginViewController = LoginViewController(style: style)
+        let lvc = LoginViewController.init(style: .lightTranslucent)
 
         /**
          To enable Amazon Cognito functionality in this sampe app, make sure to open the Podfile in the same directory
@@ -64,11 +65,11 @@ class ViewController: UIViewController {
 //        loginViewController.authenticationProvider = AWSCognitoAuthenticationProvider(serviceRegion: .USEast1, userPoolID: "",
 //                                                                                      clientID: "",
 //                                                                                      clientSecret: "")
-        loginViewController.isCancelButtonHidden = false
-        loginViewController.loginSuccessfulHandler = { user in
-            loginViewController.presentingViewController?.dismiss(animated: true, completion: nil)
-        }
-        present(loginViewController, animated: true, completion: nil)
+//        loginViewController.isCancelButtonHidden = false
+//        loginViewController.loginSuccessfulHandler = { user in
+//            loginViewController.presentingViewController?.dismiss(animated: true, completion: nil)
+//        }
+//        present(loginViewController, animated: true, completion: nil)
     }
 }
 
